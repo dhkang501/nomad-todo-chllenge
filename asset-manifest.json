@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/nomad-todo-chllenge/static/js/main.c822b431.js",
+    "static/js/453.2ec1a7a4.chunk.js": "/nomad-todo-chllenge/static/js/453.2ec1a7a4.chunk.js",
+    "index.html": "/nomad-todo-chllenge/index.html",
+    "main.c822b431.js.map": "/nomad-todo-chllenge/static/js/main.c822b431.js.map",
+    "453.2ec1a7a4.chunk.js.map": "/nomad-todo-chllenge/static/js/453.2ec1a7a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.c822b431.js"
+  ]
+}
