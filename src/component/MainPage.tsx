@@ -3,10 +3,9 @@ import AddCategory from "./AddCategory";
 import Categories from "./Categories";
 
 const Container = styled.div`
-    margin: 20px;
+    margin-top: 20px;
     text-align: center;
     div{
-        margin-bottom: 20px;
         font-size: 20px;
     }
 `

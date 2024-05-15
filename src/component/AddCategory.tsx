@@ -22,7 +22,11 @@ function AddCategory() {
     return (
         <Container>
             <form onSubmit={handleSubmit(handleValid)}>
-                <input type="text" {...register('category')} placeholder="Write a category" />
+                <input {...register("category", {
+                    required: "Please write a  To Do"
+                })} 
+                placeholder="Write a to do" 
+                />
                 <button> + add Category</button>
             </form>
         </Container>
