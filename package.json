@@ -47,5 +47,6 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.11"
-  }
+  },
+  "homepage": "https://dhkang501.github.io/nomad-todo-chllenge/"
 }
