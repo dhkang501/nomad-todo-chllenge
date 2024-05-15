@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import ToDoList from "./component/ToDoList";
+import MainPage from "./component/MainPage";
 import {Helmet, HelmetProvider} from "react-helmet-async";
-// import {Helmet} from "react-helmet";
 
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -33,9 +32,9 @@ footer, header, hgroup, main, menu, nav, section {
 *[hidden] {
     display: none;
 }
-body {
+/* body {
   line-height: 1;
-}
+} */
 menu, ol, ul {
   list-style: none;
 }
@@ -79,7 +78,7 @@ function App() {
         </Helmet>
       </HelmetProvider>
       <GlobalStyle />
-      <ToDoList />
+      <MainPage />
     </>
   );
 }

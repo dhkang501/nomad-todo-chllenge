@@ -1,21 +1,31 @@
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
+import { useRecoilState } from 'recoil';
+import { categoryState, ICategory } from '../model/recoil';
+import styled from 'styled-components';
 
-function AddCategory(){
-    interface Icategory {
-        category: string
-    }
+const Container = styled.div`
+    margin-bottom: 20px;
+`;
 
-    const {register, handleSubmit, setValue} = useForm<Icategory>();
-    const handleValid = ({category}: Icategory) => {
-        console.log(category);
-        // setValue("category","");
-    }
+function AddCategory() {
+    const [categories, setCategories] = useRecoilState<ICategory[]>(categoryState);
+    const { register, handleSubmit, setValue } = useForm<ICategory>();
+
+    const handleValid = ({ category }: ICategory) => {
+        const newCategory: ICategory = { category, id: Date.now() };
+        const updatedCategories = [...categories, newCategory];
+        localStorage.setItem('categories', JSON.stringify(updatedCategories));
+        setCategories(updatedCategories);
+        setValue('category', '');
+    };
 
     return (
-    <form onSubmit={handleSubmit(handleValid)}>
-        <input type="text"  {...register("category")} placeholder="Write a category"  />
-        <button> + add Category</button>
-    </form>
+        <Container>
+            <form onSubmit={handleSubmit(handleValid)}>
+                <input type="text" {...register('category')} placeholder="Write a category" />
+                <button> + add Category</button>
+            </form>
+        </Container>
     );
 }
 
