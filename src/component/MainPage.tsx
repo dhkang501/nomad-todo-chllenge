@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import AddCategory from "./AddCategory";
 import Categories from "./Categories";
+import Navbar from "./Navbar";
 
 const Container = styled.div`
-    margin-top: 20px;
+    margin: 20px;
     text-align: center;
     div{
         font-size: 20px;
@@ -13,6 +14,7 @@ const Container = styled.div`
 function ToDoList() {
     return (
         <Container>
+            <Navbar></Navbar>
             <div>TO DO LIST</div>
             <AddCategory/>
             <Categories></Categories>
